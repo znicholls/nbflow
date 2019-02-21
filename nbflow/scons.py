@@ -22,7 +22,7 @@ def build_cmd(notebook, timeout):
 
     return cmd
 
-def build_notebook(target, source, env, timeout="120"):
+def build_notebook(target, source, env, timeout="-1"):
     notebook = str(source[0])
     code = sp.call(build_cmd(notebook, timeout))
     if code != 0:
